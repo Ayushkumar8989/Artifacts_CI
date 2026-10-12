@@ -14,7 +14,7 @@ jobs:
           mkdir -p output
           echo "Hello, World" > output/artifact.txt
           ls -l output/ #Debudding: List contents
-          cat output/artifacts.txt #Debugging: Show file content
+          cat output/artifact.txt #Debugging: Show file content
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
@@ -27,7 +27,7 @@ jobs:
     needs: builds
     steps:
       - name: Download artifacts from GitHub Actions
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4    #actions ____@v
         with:
           name: my-artifact
           path: downloaded-artifact
