@@ -27,9 +27,9 @@ jobs:
     needs: builds
     steps:
       - name: Download artifacts from GitHub Actions
-        uses: actions/download-artifacts@v4
+        uses: actions/download-artifact@v4
         with:
-          name: my-artifact
+          name: my-artifacts
           path: downloaded-artifact
 
       - name: Display Artifact Content
